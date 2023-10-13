@@ -1,0 +1,79 @@
+:root {
+  //font-size: 12px;
+
+  // variables to be used for custom brand-able elements - probably only color-primary
+  --color-primary: #3C548E;
+  --color-secondary: #F68848;
+
+
+  --branding-primary-300: #B7C3E1;
+  --branding-primary-600: #3C548E;
+  --branding-primary-100:  #F6F8F9;
+  --branding-secondary-600: #F68848;
+  --branding-primary-900: #212935; // gun metal
+
+  --neutral-white: #ffffff;
+  --color-black: #000000;
+
+  --pressed-blue: #5C70A1;
+  --disabled-form-field: #D9D9D9;
+
+  --neutral-grey-200: #e6e6e6;
+  --neutral-grey-300: #91929D;
+  --neutral-grey-400: #707178;
+  --neutral-grey-500: #55575E;
+
+  // wcag compliant notification / alert colors:
+  --wcag-grey: #495867;
+  --wcag-orange: #CC560A;
+  --wcag-green: #2A7527;
+  --wcag-red: #AD0000;
+  --wcag-grey-bkg: #4a4a4a;
+  --wcag-dk-bkg-red: #FF2424;
+
+  //benefit accent colors
+  --annotation-5: #AE71FF;
+  --annotation-2: #07B200;
+  --annotation-3: #00B9E0;
+  --annotation-4: #DC9200;
+
+  // font-weights
+  --lt : 300;
+  --normal : 400;
+  --semiBold : 600;
+  --bold : 700;
+  --x-bold : 800; // unused?
+
+  // font-sizes variables - based on 12px base font size
+  --size-xxl: 34px; // 34px
+  --size-xl:  24px; // 24px
+  --size-l:   20px; // 20px
+  --size-m:   16px; // 16px
+  --size-s:   15px; // 15px
+  --size-xs:  14px; // 14px
+  --size-xxs: 12px; // 12px
+
+}
+// From bootstrap.
+//
+$gray-100: #f8f9fa ;
+$gray-200: #e9ecef ;
+$gray-300: #dee2e6 ;
+$gray-400: #ced4da ;
+$gray-500: #adb5bd ;
+$gray-600: #6c757d ;
+$gray-700: #495057 ;
+$gray-800: #343a40 ;
+$gray-900: #212529 ;
+
+body {
+  background-color: var(--branding-primary-100);
+  height:100%;
+  margin: 0;
+  padding: 0;
+  color: var(--branding-primary-900, #212935);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}

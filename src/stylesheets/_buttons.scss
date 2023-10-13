@@ -1,0 +1,120 @@
+button {
+  border: none;
+  font-family: Inter, sans-serif;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+  &.icon {
+    height: 24px;
+    width: 24px;
+    vertical-align: bottom;
+    background-color: transparent;
+    i {
+      font-size: 24px;
+    }
+  }
+
+
+}
+.btn {
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 55px;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: capitalize;
+  height: 40px;
+  color: var(--branding-primary-600);
+  background-color: var(--neutral-white);
+  border: 1px solid var(--branding-primary-600);
+  font-weight: var(--semiBold);
+  position: relative;
+  i {
+    font-size: 16px;
+    vertical-align: top;
+    margin-top: -6px;
+    &[class^="ph-"]{
+      margin-top: 0;
+    }
+  }
+  &:focus, &:focus-visible,
+  &:hover {
+    outline: solid 2px var(--branding-primary-600, #3C548E);
+    outline-offset: -2px;
+  }
+
+  &:disabled {
+    border: 1px solid var(--neutral-grey-200);
+    color: var(--neutral-grey-400);
+    cursor: default;
+    &:hover {
+      outline: none;
+    }
+  }
+
+
+
+
+  &.btn-primary {
+    color: var(--neutral-white);
+    background: var(--branding-primary-600, #3C548E);
+    i {
+      color: inherit;
+
+    }
+    &:focus, &:focus-visible,
+    &:hover {
+      background-color: var(--branding-primary-300);
+      color: var(--branding-primary-900);
+      outline: none;
+    }
+
+    &:active {
+
+    }
+    &:disabled {
+      background: var(--neutral-grey-200);
+      color: var(--neutral-grey-400);
+      cursor: default;
+      border: none;
+    }
+  }
+  /* tertiary button */
+  &.btn-link {
+    border: none;
+    &:disabled {
+      color: var(--neutral-grey-400);
+    }
+    &.error {
+      color: var(--wcag-red);
+    }
+    &:focus, &:focus-visible,
+    &:hover {
+      background-color: var(--neutral-grey-200);
+      outline: solid 1px transparent;
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.btn-icon {
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    padding: 4px;
+    position: relative;
+    i {
+      width: 24px;
+      height: 24px;
+      font-size: 24px;
+      position: absolute;
+      margin: 0;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

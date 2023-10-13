@@ -1,0 +1,291 @@
+// replaces code found in client_config/custom/sub_nav.scss when integrated
+$zindex-modal-backdrop:             1040 !default; // from bootstrap, so that this doesn't require bootstrap
+
+$min-toast-height: 52px;
+.alert {
+  display: none;
+  min-height: $min-toast-height;
+  color: var(--wcag-grey);
+  padding: 0;
+  background-color: var(--neutral-white);
+  min-width: 220px;
+  width: auto;
+  border: solid 1px var(--wcag-grey);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.39);
+  &.fade.show {
+    display: block;
+  }
+  .alert-icon {
+    padding: 8px 10px 12px 10px;
+    box-sizing: border-box;
+    width: 44px;
+    min-height: 100%;
+    text-align: center;
+    background-color: var(--wcag-grey);
+    i {
+      color: var(--neutral-white);
+      @extend .info;
+    }
+  }
+
+  .alert-content {
+    padding: 12px 10px;
+    font-size: 15px;
+    min-height: $min-toast-height;
+    a {
+      line-height: 40px;
+      margin-top: 20px;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: var(--semiBold);
+      margin-left: 42px;
+    }
+  }
+  .alert-close {
+    padding: 8px 16px 0 0;
+    vertical-align: middle;
+    height: 100%;
+    margin: 0;
+
+    i {
+      color: var(--neutral-black);
+    }
+    button {
+      position: relative;
+      padding-top: 0;
+    }
+  }
+  &.alert-dismissable {
+    z-index: 10;
+    opacity: 1;
+    padding: 0 12px 0 0;
+  }
+
+
+  &-danger , &.danger, &.error, &-error {
+    border-color: var(--wcag-red);
+    background-color: var(--neutral-white);
+    .alert-icon {
+      background-color: var(--wcag-red);
+      i {
+        @extend .info;
+      }
+    }
+
+  }
+  &-success , &.success{
+    font-weight: normal;
+    background-color: var(--neutral-white);
+    border-color: var(--wcag-green);
+
+    .alert-icon {
+      background-color: var(--wcag-green);
+      i {
+        @extend .check_circle;
+      }
+    }
+  }
+  &-success-connection {
+    @extend .alert-success;
+  }
+  &-warning, &.warning {
+    background-color: var(--neutral-white);
+    border-color: var(--wcag-orange);
+
+
+    .alert-icon {
+      background-color: var(--wcag-orange);
+      .material-icons {
+        @extend .warning;
+        &::before, &:before {
+          color: var(--neutral-white);
+          content: '\e002' !important;
+        }
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.alerts {
+  position: absolute;
+  top: var(--size-m) ;
+  z-index: $zindex-modal-backdrop;
+  padding: 0;
+  width: auto;
+
+  .alert {
+    display: block;
+    width: fit-content;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding: 0 12px 0 0;
+    margin-bottom: 12px;
+
+    &.alert-dismissable {
+      z-index: 12;
+      opacity: 1;
+    }
+
+    &-success {
+      background-color: var(--neutral-white);
+      color: var(--wcag-grey);
+      border-color: var(--wcag-green);
+    }
+    a:not(.close) {
+      line-height: 24px;
+      display: block;
+      margin: 0 0 6px 0;
+      &:first-child {
+        margin-top: 20px;
+      }
+    }
+
+  }
+}
+
+// replaces code found in client_config/custom/design_elements.scss when integrated
+
+
+.read-only:not(table) {
+  min-height: $min-toast-height;
+  color: var(--wcag-grey);
+  padding: 0 16px 0 0;
+  background-color: var(--neutral-white);
+  border: solid 1px var(--wcag-grey);
+  min-width: 220px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.39);
+  display: inline-block;
+  a {
+    color: var(--hyperlink);
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: var(--semiBold);
+    padding-left: 30px;
+    padding-right: 30px;
+    &:first-child {
+      margin-left: 42px;
+    }
+  }
+  .alert-icon {
+    padding: 8px 10px 12px 10px;
+    box-sizing: border-box;
+    width: 44px;
+    min-height: 100%;
+    text-align: center;
+    background-color: var(--wcag-grey);
+    color: var(--neutral-white);
+    display: inline-block;
+    i {
+      color: var(--neutral-white);
+      font-size: 24px;
+      @extend .info;
+    }
+  }
+  .alert-content {
+    padding: 12px 10px;
+    font-size: 15px;
+    display: inline-block;
+    margin: 0 auto 0 0;
+    min-height: $min-toast-height;
+    @include media-breakpoint-down(md) {
+      .link {
+        margin: 18px auto 12px;
+        text-align: center;
+        a {
+          margin: auto;
+        }
+      }
+    }
+  }
+  &.danger, &.error {
+    border: solid 1px var(--wcag-red);
+    background-color: var(--neutral-white);
+    .alert-icon {
+      background-color: var(--wcag-red);
+      i {
+        @extend .info;
+        color: var(--neutral-white);
+      }
+    }
+  }
+  &.warning {
+    border: solid 1px var(--wcag-orange);
+    background-color: var(--neutral-white);
+    .alert-icon {
+      background-color: var(--wcag-orange);
+      i {
+        &::before {
+          content: '\e002';
+        }
+
+      }
+    }
+  }
+  &.success {
+    background-color: var(--neutral-white);
+    border-color: var(--wcag-green);
+
+    .alert-icon {
+      background-color: var(--wcag-green);
+      i {
+        @extend .check_circle;
+        color: var(--neutral-white);
+      }
+    }
+  }
+}
+
+.alert-tertiary {
+  font-weight: var(--semiBold);
+  color: var(--wcag-grey);
+  font-size: 15px;
+  display: inline-block;
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  .alert-icon {
+    padding: 0 6px 0 0;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    i {
+      color: inherit;
+      border: none;
+      @extend .info;
+    }
+  }
+  .alert-content {
+    padding-left: 0;
+  }
+  &.success {
+    color: var(--wcag-green);
+    .alert-icon {
+      i {
+        @extend .check_circle;
+      }
+    }
+  }
+  &.warning {
+    color: var(--wcag-orange);
+    .alert-icon {
+      i {
+        @extend .warning;
+        border: none !important;
+      }
+    }
+  }
+  &.danger,
+  &.error {
+    color: var(--wcag-red);
+    .alert-icon {
+      i {
+        @extend .info;
+      }
+    }
+  }
+
+}

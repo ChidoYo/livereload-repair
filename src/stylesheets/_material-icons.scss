@@ -1,0 +1,240 @@
+// Use when material-icons are necessary - sample:
+// <span class="m-icon-container">
+//   <i class="material-icons">event</i>
+// </span>
+
+.m-icon-container {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  margin-top: -18px;
+
+  .material-icons {
+    top: auto;
+  }
+}
+
+.material-icons {
+  height: 24px;
+  position: relative;
+  top: 5px;
+  &.more_vert {
+    &::before {
+      content: '\e5d4';
+      margin-right: -10px;
+    }
+  }
+
+  &.help_outline {
+    &::before {
+      content: '\e8fd';
+    }
+  }
+  &.settings {
+    &::before {
+      content: '\e8b8';
+      font-size: var(--size-xl);
+    }
+  }
+  &.arrow_upward, &.arrow_downward {
+    font-size: var(--size-m);
+  }
+  &.keyboard_arrow_down {
+      &::before {
+        content: '\e313';
+      }
+    }
+  &.keyboard_arrow_up {
+      &::before {
+        content: '\e316';
+      }
+    }
+  &.keyboard_arrow_left {
+      &::before {
+        content: '\e314';
+      }
+    }
+  &.keyboard_arrow_right {
+      &::before {
+        content: '\e315';
+      }
+    }
+  &.check {
+    &::before {
+      content: '\e5ca';
+    }
+  }
+  &.close {
+    &::before {
+      content: '\e5cd';
+    }
+  }
+  &.not_interested {
+    &::before {
+      content: '\e033';
+    }
+  }
+  &.more_horiz {
+    &::before {
+      content: '\e5d3';
+    }
+  }
+  &.check_circle {
+    &::before {
+      content: '\e86c';
+    }
+  }
+  &.arrow_upward {
+    &::before {
+      content: '\e5d8';
+    }
+  }
+  &.arrow_downward {
+    &::before {
+      content: '\e5db';
+    }
+  }
+  &.edit {
+    &::before {
+      content: '\e3c9';
+      font-size: 18px;
+      font-weight: var(--semiBold);
+    }
+    &.font-xl {
+      &::before {
+        font-size: 24px;
+      }
+    }
+  }
+  &.warning {
+    &:before {
+      content: '\e002';
+      color: var(--wcag-orange);
+    }
+  }
+  &.add_circle {
+    color: var(--gray-lighter);
+    margin-right: 16px;
+    &::before {
+      content: '\e147';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &.fullscreen {
+    &::before {
+      content: "\e5d0";
+    }
+  }
+  &.exit-fullscreen {
+    &::before {
+      content: "\e5d1";
+    }
+  }
+  &.search {
+    &::before {
+      content: "\e8b6";
+    }
+  }
+  &.account_box {
+    &::before {
+      content: '\e851';
+    }
+  }
+  &.person {
+    &::before {
+      content: '\e7fd';
+    }
+  }
+  &.shopping_cart {
+    &::before {
+      content: '\e8cc';
+    }
+  }
+  &.alarm {
+    &::before {
+      content: '\e855';
+    }
+  }
+  &.info {
+    &::before {
+      content: '\e88e';
+    }
+  }
+  &.delete_forever {
+    &::before {
+      content: '\e92b';
+    }
+  }
+  &.publish {
+    &::before {
+      content: '\e255';
+    }
+  }
+  &.eye {
+    &::before {
+      content: '\e8f4';
+    }
+  }
+  &.eye-off {
+    &::before {
+      content: '\e8f5';
+    }
+  }
+
+}
+.material-icons-outlined {
+  font-family: 'Material Icons Outlined';
+  &.check_circle {
+    &::before {
+      content: '\e86c';
+    }
+  }
+  &.cloud_upload {
+    &::before {
+      content: '\e2c3';
+    }
+  }
+}
+
+.material-icons-round {
+  font-family: 'Material Icons Round';
+  &.control_point {
+    &::before {
+      content: '\e3ba';
+      font-size: 18px;
+    }
+  }
+}
+
+.fas {
+  &.fa-chevron-down {
+    &::before {
+      font-family: "Material Icons" !important;
+      content: '\e313' !important;
+      font-size: 2rem;
+      line-height: 40px;
+    }
+  }
+}
+.far {
+  &.fa-calendar-alt {
+    &::before {
+      font-family: "Material Icons" !important;
+      content: "\ebcc";
+      font-size: 24px;
+      line-height: 40px;
+    }
+  }
+}
+
+
+// material-icons spacing
+.material-icons {
+
+  // with medium sized font .font-m
+  &.font-m {
+    top: 2px;
+  }
+}

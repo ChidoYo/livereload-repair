@@ -1,0 +1,31 @@
+{
+  "name": "problem",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production webpack && node cleanBuild.js",
+    "webpack-server": "webpack serve --port 3050",
+    "sass-watch": "sass --watch --load-path=src src/stylesheets/:src/stylesheets",
+    "serve": "webpack serve --live-reload"
+  },
+  "keywords": [],
+  "author": "Patty Johnson",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "concurrently": "^8.2.1",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "sass": "^1.68.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-manifest-plugin": "^5.0.0"
+  }
+}

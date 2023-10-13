@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Components</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <script src="javascripts/index.js" type="module"></script>
+
+  <link rel="stylesheet" href="stylesheets/bootstrap_problem.css">
+  <link rel="stylesheet" href="stylesheets/application.css">
+  <script src="https://unpkg.com/phosphor-icons"></script>
+
+</head>
+<body>
+<div class="container">
+  <div class="row">
+
+    <div class="col col-md-6 mx-auto">
+      <form>
+        <ps-text-field input-id="label-test" label="Label" placeholder="This is some placeholder text"
+                       help-text="This is some help text" required></ps-text-field>
+
+        <ps-text-field input-id="date-test" label="datepicker" placeholder="00/00/0000" help-text="Datepicker help text"
+                       type="date"></ps-text-field>
+
+        <ps-text-field input-id="label-test-disabled" label="Label" placeholder="This is a disabled field"
+                       help-text="This is some help text" disabled></ps-text-field>
+
+        <ps-text-field input-id="search" label="Search Field" type="search" ></ps-text-field>
+
+
+        <ps-text-field input-id="icon-test" label="Icon Test" type="search" icon-left ></ps-text-field>
+
+        <ps-button id="submit-test" label="Submit" type="submit" level="primary" extra-class="mt-3"></ps-button>
+      </form>
+
+
+    </div>
+
+  </div>
+  <div>
+    <h3>Modal Component</h3>
+    <!-- PSButton as Trigger -->
+    <p>All stuff removed!</p>
+  </div>
+
+</div>
+</body>
+</html>
