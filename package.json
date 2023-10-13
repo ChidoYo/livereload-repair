@@ -7,11 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production webpack && node cleanBuild.js",
     "webpack-server": "webpack serve --port 3050",
-    "sass-watch": "sass --watch --load-path=src src/stylesheets/:src/stylesheets",
     "serve": "webpack serve --live-reload"
   },
   "keywords": [],
-  "author": "Patty Johnson",
+  "author": "Me!",
   "license": "ISC",
   "description": "",
   "devDependencies": {
